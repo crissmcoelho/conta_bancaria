@@ -2,7 +2,7 @@ package conta_bancaria.model;
 
 public class Conta {
 	
-	//Inserção de variáveis
+	//Atributos da classe conta
 	
 	private int numero;
 	private int agencia;
@@ -11,7 +11,7 @@ public class Conta {
 	private float saldo;
 	
 	
-	
+	//Método construtor
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
@@ -19,6 +19,8 @@ public class Conta {
 		this.titular = titular;
 		this.saldo = saldo;
 	}
+	
+	//Métodos Get e Setter
 
 	
 	public int getNumero() {
@@ -60,5 +62,42 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
+	
+	public boolean sacar(float valor) {
+		if(this.saldo < valor) {
+			System.out.println("Saldo insuficiente!");
+			return false;		
+		} 
+		this.saldo = saldo - valor;
+		return true;
+			
+		}
+	
+	public void depositar(float valor) {
+		this.saldo = saldo + valor;
+	}
+	
+	
+	public void visualizar() {
+		
+		String tipo = " ";
+		
+		switch(this.tipo) {
+		case 1 -> tipo  = "Conta Corrente";
+		case 2  -> tipo = "Conta Poupança";
+		default  -> tipo  = "Desconhecido";
+		
+		
+		}
+		System.out.println("\n*******************************************************");
+		System.out.println("Dados da conta");
+		System.out.println("*******************************************************");
+		System.out.printf("Número da conta: %d%n", this.numero);
+		System.out.printf("Número da agência: %d%n", this.agencia);
+		System.out.printf("Tipo da agência: %d%n", this.tipo);
+		System.out.printf("Titular da agência: %s%n", this.titular);
+		System.out.printf("Saldo da agência: %f%n", this.saldo);
+		
+				}
 
 }
