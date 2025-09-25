@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -16,7 +17,7 @@ public class Menu {
 		
 		//Instanciar o objeto da classe conta
 		
-		Conta c1 = new Conta(1, 123, 1,"Cintia Dourado", 500000.00f);
+		/*Conta c1 = new Conta(1, 123, 1,"Cintia Dourado", 500000.00f);
 		Conta c2 = new Conta(2, 123, 2,"Priscila Lins", 500000.00f);
 		System.out.println("O saldo da conta é: " + c1.getSaldo());
 		
@@ -49,6 +50,15 @@ public class Menu {
 		//Depositar na conta corrente
 		cc1.depositar(5000.00f);
 		cc1.visualizar();
+		
+		
+		//Testes conta poupança
+		ContaPoupanca cp1 = new ContaPoupanca(4, 789, 2, "Cris", 500.00f, 12);
+		cp1.visualizar();
+		
+		cp1.depositar(2000.00f);
+		System.out.println("Depósito realizado com sucesso!");
+		cp1.visualizar(); */
 		
 		
 		
