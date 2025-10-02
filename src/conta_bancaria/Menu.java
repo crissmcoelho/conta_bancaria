@@ -6,7 +6,7 @@ import conta_bancaria.util.Cores;
 
 public class Menu {
 
-public class Menu {
+
 	
 	public static void main(String[] args) {
 
@@ -49,6 +49,7 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE + "Criar Conta\n\n");
+				cadastrar();
 
 				break;
 			case 2:
@@ -92,5 +93,6 @@ public class Menu {
 		System.out.println("github.com/crissmcoelho");
 		System.out.println("*********************************************************");
 	}
-
 }
+
+
